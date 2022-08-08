@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.padre{
+    height: 850px;
+    /* Grid se aplica al contenedor padre */
+    display: grid;
+    /* propiedad para trabajar conlumnas y filas en grid */
+    /* La unidad de medida fraction (fr) funciona solo para grid */
+    /* grid-template-columns: 30% 70%;
+    grid-template-rows: 20% 80%; */
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 4fr;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+
+.hijoUno{
+    background-color: rgb(152, 255, 255);
+}
+.hijoDos{
+    background-color: rgb(39, 73, 73);
+}
+.hijoTres{
+    background-color: rgb(31, 197, 197);
+}
+.hijoCuatro{
+    background-color: rgb(56, 126, 126);
+}
+
+.ejemplo{
+    height: 500px;
+    background-color: #ffdfb0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    /* EJE HORIZONTAL */
+    justify-items: center;
+
+    /* EJE VERTICAL */
+    align-items: center;
+}
+
+.imagen-1{
+    /* Trabaja la alineación del hijo */
+    justify-self: end ;
+    align-self: end;
+}
+
+
+
+/* Ejemplo 3 */
+
+.container{
+    height: 100vh;
+    color: rgb(197, 197, 197);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+
+    /* SIRVE PARA TRABAJAR LAS AREAS DEL HTML */
+    grid-template-areas: 
+        "header header header"
+        "main main section"
+        "footer footer footer"
+    ;
+}
+
+header{
+    background-color: #112442;
+    grid-area: header;
+    display: flex;
+}
+
+main{
+    background-color: #1a1a1a;
+    grid-area: main;
+    text-align: center;
+}
+
+section{
+    background-color: #3d3d3d;
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    background-color: #112442;
+    grid-area: footer;
+}
